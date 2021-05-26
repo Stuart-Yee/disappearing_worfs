@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet"> 
+    <title>Parallel Worfs</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Parallel Worfs</h1>
+        <h2>The Quantum Fissure:</h2>
+        <p>On stardate 47391.2 while returning from a bat'leth tournament on Forcas III, Worf unknowingly encountered a quantum fissure causing him to travel unnoticed to parellel universes slightly different from his own. Because the differences were so subtle, he noticed only slight changes and didn't realize he was actually travelling to parallel realities. After scanning his RNA, the crew of the Enterprise found that his RNA had a different quantum signature that did not match their own universe.</p>
+        <p>To return Worf to his own universe, the Enterprise travelled back to the quantum fissure that Worf initially encountered. To their dismay, multiple Enterprises and Worfs from other dimensions began entering their universe through the fissure!</p>
+        <h2>Your Mission:</h2>
+        <p>Your mission is to return the multiple Worfs to their dimensions by clicking on the images. At any time, you may use Q's power to bring back all the parallel Worfs by clicking the "Restore" button.</p>
+        <div class="row">
+            <img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf">
+        </div>
+        <div class="row">
+            <img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf"><img src="worf.jpg" alt="worf">
+        </div>
+        <button>Restore</button>
+        <p>See ST:TNG Episode "Parallels" (Season: 7 Episode: 11): <a href="https://memory-alpha.fandom.com/wiki/Parallels_(episode)" target="_blank">Memory Alpha Article: "Parallels"</a></p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("img").click(function(){
+                $(this).hide();
+            });
+            $("button").click(function(){
+                $("img").show();
+            })
+            $("a").click(function(){
+                if($(this).attr("target") == "_blank"){
+                    alert("Open page from different site?");
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
